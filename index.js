@@ -33,6 +33,9 @@ function renderStations(stationsData){
 		<option value=${station.name}> ${station.name}</option>	
 		`
 		}
+
+		filterDate.value = url.get('day')
+
 	   if (stations != null){	
 			stations.innerHTML += `
 			<h2 value=${station.name} onclick="navigateFilterPage_From(this)">${station.name}</h2>	

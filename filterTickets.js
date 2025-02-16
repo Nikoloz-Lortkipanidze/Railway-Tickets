@@ -6,7 +6,7 @@ function getFlights(){
 
 getFlights()
 
-function displayFlights(flightsData){
+async function displayFlights(flightsData){
 	let flights = document.querySelector('.flights')
 
    let days = ["კვირა", "ორშაბათი", "სამშაბათი", "ოთხშაბათი", "ხუთშაბათი", "პარასკევი", "შაბათი"]
@@ -14,20 +14,22 @@ function displayFlights(flightsData){
 	let weekDay = days[date.getDay()]
 
 	for (let fligth of flightsData){
-		console.log(filterFrom.value, fligth.from, fligth.from == filterFrom.value)
 		if (
-		(	filterFrom.value == 0 || filterFrom == fligth.from	) && 
-		(	filterTo.value == 0 || filterTo == fligth.to	) && 
-		(	weekDay == '' || weekDay == fligth.date	)
+		(	filterFrom.value == 0 || filterFrom.value == fligth.from	) && 
+		(	filterTo.value == 0 || filterTo.value == fligth.to	) && 
+		(	filterDate.value  == '' || weekDay == fligth.date	)
 		) {
 			flights.innerHTML += `
-			<div>
-			<h2>მარშრუტი: ${fligth.name}</h2>
-			<h2>გასვლა-დაბრუნება: ${fligtht.departure}-${fligth.arrive}</h2>
-			</div>
+			<section onclick="navigateBuyPage(${fligth.id})">
+					<h2>გასვლა: ${fligth.from}-${fligth.date}-${fligth.departure}</h2>
+					<h2>ჩამოსვლა: ${fligth.to}-${fligth.arrive}</h2>
+			</section>
 			`
 		}
 	}
 }
 
+function navigateBuyPage(trainId){
+	window.location.href = `buyTickets.html?trainId=${trainId}`
+}
 

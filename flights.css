@@ -1,32 +1,32 @@
-.stations {
-	padding: 20px;
-	display: flex;
+.flights {
+	display: flex; 
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
 	gap: 20px;
 }
 
-.stations h2 {
-	width: 98%;
-	font-size: 28px;
+.flights section  {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
 	background-color: white;
-	padding: 20px;
+	padding: 4px;
+	width: 96%;
 	border-radius: 24px;
 	transition: 200ms;
 	cursor: pointer;
+}
 
-  font-family: "Noto Sans Georgian", serif;
-  font-optical-sizing: auto;
-  font-weight: 100;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
-
- }
-
-.stations h2:hover {
+.flights section:hover {
 	background-color: rgb(255, 220, 220);
 }
 
-
+.flights h2 {
+  font-family: "Noto Sans Georgian", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
