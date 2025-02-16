@@ -1,0 +1,64 @@
+.filterSection {
+	width: 98vw;
+	height: 400px;
+	background-image: url('https://images.unsplash.com/photo-1592844002373-a55ecd7af140?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aW5kaWFuJTIwcmFpbHdheXxlbnwwfHwwfHx8MA%3D%3D');
+	background-position: center;
+	background-size: cover;
+	margin: 12px auto;
+	border-radius: 20px;
+	display: flex;
+	justify-content: end;
+	flex-direction: column;
+}
+
+.filterSection div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+	padding: 18px;
+}
+
+.filterSection div select,
+.filterSection div input {
+	background-color: white;
+	border: 1px solid gray;
+	border-radius: 8px;
+	height: 40px;
+	width: 100%;
+}
+
+.filterSection h1 {
+	color: white;
+	text-shadow: 1px 0px 6px black;
+	font-size: 44px;
+	max-width: 650px;
+	width: 100%;
+	padding: 24px;
+
+  font-family: "Noto Sans Georgian", serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+@media screen and (max-width: 800px) {
+	.filterSection h1 {
+		font-size: 40px;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.filterSection h1 {
+		font-size: 36px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.filterSection h1 {
+		font-size: 32px;
+	}
+}
+
