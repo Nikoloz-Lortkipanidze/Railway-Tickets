@@ -12,7 +12,7 @@ function clearLocalStorage(){
 
 function checkReg(){
 	if (localStorage.getItem("token") == null){
-		navReg.innerHTML = 'რეგისტრაცია'	
+		navReg.innerHTML = 'სისტემაში შესვლა'	
 	} else {
 		navReg.innerHTML = 'უკან გასვლა'
 	}
