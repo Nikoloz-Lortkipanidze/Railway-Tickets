@@ -1,9 +1,40 @@
+let navReg = document.querySelector('.navReg')	
+
+function clearLocalStorage(){
+	if (localStorage.getItem('token') != null){
+		let tempToken = localStorage.getItem('token')
+		localStorage.clear()
+		localStorage.setItem('token', tempToken)
+	} else {
+		localStorage.clear()
+	}
+}
+
+function checkReg(){
+	if (localStorage.getItem("token") == null){
+		navReg.innerHTML = 'რეგისტრაცია'	
+	} else {
+		navReg.innerHTML = 'უკან გასვლა'
+	}
+}
+
+navReg.addEventListener('click', function(){
+	if (navReg.innerHTML == 'რეგისტრაცია'){
+		window.location.href = 'register.html'
+	} else {
+		localStorage.removeItem('token')
+		navReg.innerHTML = 'რეგისტრაცია'	
+	}
+})
+
 function getStations(){
 	fetch('https://railway.stepprojects.ge/api/stations')
 	.then(res => res.json())
 	.then(res => renderStations(res))
 }
 
+checkReg()
+clearLocalStorage()
 getStations()
 
 let filterFrom = document.querySelector('.filterFrom')

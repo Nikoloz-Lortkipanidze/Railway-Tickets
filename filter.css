@@ -11,6 +11,15 @@
 	flex-direction: column;
 }
 
+.navReg {
+	font-size: 24px;
+	padding: 8px;
+	border-radius: 8px;	
+	position: absolute;
+	right: 50px;
+	top: 25px;
+}
+
 .filterSection div {
 	display: flex;
 	align-items: center;

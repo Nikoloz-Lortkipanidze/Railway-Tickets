@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>რკინიგზის ბილეთები</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="buyTickets.css">
+    <link rel="stylesheet" href="register.css">
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,19 +13,14 @@
 </head>
 <body>
 
-	<section>
-		<div class="trainData"></div>
-		<div class="classesDiv">
-			<select class="ticketClasses">
-				<option value="0">კატეგორია</option>
-			</select>
-		</div>
-		<div class="tickets"></div>
-			<h2 class='price'>გადასახდელი თანხა: </h2>
-		<button class="buyTickets">გადახდა</button>
-	</section>
+	<form onsubmit="createToken()">
+		<h1>რეგისტრაცია</h1>
+	<input type="email" class="email" placeHolder="ელფოსტა" value="eve.holt@reqres.in"  required>
+		<input type="password" class="pass"  placeHolder="პაროლი" value="pistol" required>
+		<button type="submit">რეგისტრაცია</button>
+	</form>
 
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-	<script src="buyTickets.js"></script>
+	<script src="register.js"></script>
 </body>
 </html>
